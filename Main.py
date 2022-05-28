@@ -25,10 +25,10 @@ def quizz():
         answer = numbers[answer_index]
 
         if attempt == answer:
-            print("CORRECT!\n good job")
+            print("CORRECT!\n++++ good job ++++")
             score += 1
         else:
-            print("INCORRECT!\n better luck next time")
+            print("INCORRECT!\n++++ better luck next time ++++")
     return score
 
 
@@ -46,14 +46,15 @@ def yes_no(question_text):
             return answer
 
         else:
-            print("Please enter 'yes' or 'no'")\
+            print("Please enter 'yes' or 'no'")
 
 
 
 def instructions():
     print("**** How to play ****")
     print()
-    print("This is a Maori numbers quizz\n which you answer the number 1,2,3,..., 10 from the Maori name that is given")
+    print("This is a Maori numbers quizz\nwhich you answer the number 1,2,3,..., 10 from the Maori number name that is given\n "
+          "and match the choice then add the up the score\nThere is 10 question in total\n")
     print()
 # Main routine
 
@@ -62,10 +63,9 @@ print("\tWelcome to Ngā Tau pātai\n"
       "--------------------------------")
 name = get_name()
 age = get_age()
-print("This is a Maori numbers quizz\nwhich you answer the number 1,2,3,..., 10 from the name that is given\n"
-              "and match the choice then add the up the score\n")
+print("This is a Maori number quizz\nThere is 5 questions in total")
 
-played_before = yes_no("Have yo play before?: ")
+played_before = yes_no("Have you play before?: ")
 
 if played_before == "No":
     instructions()

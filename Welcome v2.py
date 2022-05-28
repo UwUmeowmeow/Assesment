@@ -15,5 +15,4 @@ def get_age():
 # Main routine
 name = get_name()
 age = get_age()
-print(f"\nHI {name}. At {age} year old, you might find this quizz a bit easy.\n"
-      "\nAnyway, this is a test about Maori numbers.\n")
+print(f"\nHI {name}. At {age} year old, you might find this quizz a bit easy.")
