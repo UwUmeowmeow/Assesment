@@ -16,7 +16,7 @@ def difficulty():
     while not valid:
         error = "Please choose easy/hard\n"
         try:
-            print("Choose 1 difficulty:\n"
+            print("\nChoose 1 difficulty:\n"
                   " - Easy\n"
                   " - Hard")
             difficult = input(">>> ").lower()
@@ -33,12 +33,13 @@ def difficulty():
 
 
 def quizz():
-    score = 0
-    questions = ["tahi", "rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
-    numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    scores = 0
+    questions = ["tahi", "rua", "toru", "whā", "rima",
+                 "ono", "whitu", "waru", "iwa", "tekau"]
+    numbers = ["1asd", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
     rounds_played = 0
-    if mode == 'easy' or mode == 'e':
+    if mode == 'easy':
         quest_no = 5
     else:
         quest_no = 10
@@ -52,11 +53,12 @@ def quizz():
 
         if attempt == answer:
             print("CORRECT!\ngood job")
-            score += 1
+            scores += 1
         else:
             print("INCORRECT!\nbetter luck next time\n"
-                  f"The correct answer is {numbers[questions.index(question)]}\n")
-    return score
+                  f"The correct answer is "
+                  f"{numbers[questions.index(question)]}\n")
+    return scores
 
 
 def yes_no(question_text):
@@ -72,16 +74,19 @@ def yes_no(question_text):
             return answer
 
         else:
-            print("Please enter 'yes' or 'no'")\
-
+            print("Please enter 'yes' or 'no'")
 
 
 def instructions():
     print("\n*** How to play ***")
     print()
-    print("This is a Maori numbers quizz\n""which you answer the number 1,2,3,..., 10 from the name that is given\n"
-              "and match the choice then add the up the score.\n")
+    print("This is a Maori numbers quizz\n"
+          "which you answer the number 1,2,3,..., 10 "
+          "from the name that is given\n"
+          "and match the choice then add the up the score.")
     print()
+
+
 # Main routine
 
 
@@ -90,7 +95,8 @@ print("\tWelcome to Ngā Tau pātai\n"
 name = get_name()
 age = get_age()
 
-print(f"\nHi. {name} At {age} you might find this quizz little bit easy.\nThey are 5, 10 question selected by your difficulty.\n")
+print(f"\nHi {name} At {age} you might find this quizz little bit easy.\n"
+      f"They are 5, 10 question selected by your difficulty.\n")
 
 played_before = yes_no("Have you play before?: ")
 
@@ -100,4 +106,4 @@ if played_before == "No":
 mode = difficulty()
 score = quizz()
 print(f"You got {score} points out of 5 ")
-print("** Thank for playing **")
+print(" ** Thank for playing ** ")
