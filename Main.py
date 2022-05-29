@@ -1,5 +1,7 @@
 import random
 
+quest_no = 0
+
 
 def get_name():
     your_name = input("What is you name: ")
@@ -16,7 +18,7 @@ def difficulty():
     while not valid:
         error = "Please choose easy/hard\n"
         try:
-            print("\nChoose 1 difficulty:\n"
+            print("Choose 1 difficulty:\n"
                   " - Easy\n"
                   " - Hard")
             difficult = input(">>> ").lower()
@@ -34,12 +36,13 @@ def difficulty():
 
 def quizz():
     scores = 0
+    global quest_no
+
     questions = ["tahi", "rua", "toru", "whā", "rima",
                  "ono", "whitu", "waru", "iwa", "tekau"]
-    numbers = ["1asd", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-
+    numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     rounds_played = 0
-    if mode == 'easy':
+    if mode == 'easy' or mode == 'e':
         quest_no = 5
     else:
         quest_no = 10
@@ -66,7 +69,7 @@ def yes_no(question_text):
         answer = input(question_text).lower()
 
         if answer == "yes" or answer == "y":
-            answer == "Yes"
+            answer = "Yes"
             return answer
 
         elif answer == "no" or answer == "n":
@@ -74,7 +77,8 @@ def yes_no(question_text):
             return answer
 
         else:
-            print("Please enter 'yes' or 'no'")
+            print("Please enter 'yes' or 'no'")\
+
 
 
 def instructions():
@@ -83,15 +87,14 @@ def instructions():
     print("This is a Maori numbers quizz\n"
           "which you answer the number 1,2,3,..., 10 "
           "from the name that is given\n"
-          "and match the choice then add the up the score.")
+          "and match the choice then add the up the score.\n")
     print()
-
-
 # Main routine
 
 
 print("\tWelcome to Ngā Tau pātai\n"
       "--------------------------------")
+
 name = get_name()
 age = get_age()
 
@@ -105,5 +108,5 @@ if played_before == "No":
 
 mode = difficulty()
 score = quizz()
-print(f"You got {score} points out of 5 ")
-print(" ** Thank for playing ** ")
+print(f"You got {score} points out of {quest_no} ")
+print("** Thank for playing **")
