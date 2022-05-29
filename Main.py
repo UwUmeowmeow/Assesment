@@ -37,7 +37,6 @@ def difficulty():
 def quizz():
     scores = 0
     global quest_no
-
     questions = ["tahi", "rua", "toru", "whā", "rima",
                  "ono", "whitu", "waru", "iwa", "tekau"]
     numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
