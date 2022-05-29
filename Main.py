@@ -5,7 +5,7 @@ quest_no = 0
 
 # Get username
 def get_name():
-    your_name = input("What is you name: ")
+    your_name = input("What is your name: ")
     return your_name
 
 
@@ -93,7 +93,7 @@ def yes_no(question_text):
 def instructions():
     print("\n*** How to play ***")
     print()
-    print("This is a Maori numbers quizz\n"
+    print("This is a Maori numbers quiz\n"
           "which you answer the number 1,2,3,..., 10 "
           "from the name that is given\n"
           "and match the choice then add the up the score.\n")
@@ -107,7 +107,7 @@ print("\tWelcome to Ngā Tau pātai\n"
 name = get_name()
 age = get_age()
 
-print(f"\nHi {name} At {age} you might find this quizz little bit easy.\n"
+print(f"\nHi {name} At {age} you might find this quiz little bit easy.\n"
       f"They are 5, 10 question selected by your difficulty.\n")
 
 played_before = yes_no("Have you play before?: ")
