@@ -108,7 +108,7 @@ name = get_name()
 age = get_age()
 
 print(f"\nHi {name} At {age} you might find this quiz little bit easy.\n"
-      f"They are 5, 10 question selected by your difficulty.\n")
+      f"They are 5, 10 questions selected by your difficulty.\n")
 
 played_before = yes_no("Have you play before?: ")
 # if user have not played before, show instructions
